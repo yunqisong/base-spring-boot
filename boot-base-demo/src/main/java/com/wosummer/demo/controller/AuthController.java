@@ -29,7 +29,7 @@ import static com.wosummer.demo.enums.Const.*;
 @SuppressWarnings("ALL")
 @RestController
 @RequestMapping("auth")
-@Api(tags = "用户权限相关 API")
+@Api(tags = "权限相关 API")
 public class AuthController extends BaseController {
 
   @Autowired

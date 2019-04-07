@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 @RequestMapping("uploadRepeatRateCheck")
 @RestController
-@Api(tags = "UploadRepeatRateCheck API")
+@Api(tags = "查重相关 API")
 public class UploadRepeatRateCheckController extends BaseController {
 
   @PostMapping

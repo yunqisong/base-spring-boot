@@ -1,13 +1,19 @@
 dependencies {
   compile project(":boot-base")
-
   // Mysql - JDBC
   compile("mysql:mysql-connector-java:8.0.15")
 
   compile("gradle.plugin.org.ec4j.gradle:editorconfig-gradle-plugin:0.0.2")
 
-  compile("org.apache.velocity:velocity:1.7")
-  compile("org.jyaml:jyaml:1.3")
-  compile("org.dom4j:dom4j:2.1.1")
-  compile("com.baomidou:mybatis-plus-generator:3.1.0")
+  // 生成器
+  testCompile("org.apache.velocity:velocity:1.7")
+  testCompile("org.jyaml:jyaml:1.3")
+  testCompile("org.dom4j:dom4j:2.1.1")
+  testCompile("com.baomidou:mybatis-plus-generator:3.1.0")
+
+  //
+  implementation("org.springframework.boot:spring-boot-devtools:${springBootVersion}")
+
+  // 测试
+  testCompile("org.springframework.boot:spring-boot-starter-test:${springBootVersion}")
 }
