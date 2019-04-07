@@ -1,0 +1,10 @@
+server:
+  port: 8080
+spring:
+  profiles:
+    active: dev,devLocal
+    include: base,common
+  servlet:
+    multipart:
+      max-file-size: 20480MB
+      max-request-size: 20480MB

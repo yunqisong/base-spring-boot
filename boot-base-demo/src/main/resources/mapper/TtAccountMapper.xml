@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wosummer.demo.mapper.TtAccountMapper">
+
+  <!-- 通用查询结果 -->
+  <resultMap id="BaseResultMap" type="com.wosummer.demo.entity.TtAccount">
+    <id column="id" property="id" />
+    <result column="name" property="name" />
+    <result column="info" property="info" />
+    <result column="account" property="account" />
+    <result column="password" property="password" />
+    <result column="type" property="type" />
+    <result column="lastlogin" property="lastlogin" />
+    <result column="cookies" property="cookies" />
+  </resultMap>
+
+  <!-- 数据库字段 -->
+  <sql id="Base_Column_List">
+    `id`,`name`,`info`,`account`,`password`,`type`,`lastlogin`,`cookies`
+  </sql>
+
+  <!-- 用户添加SQL -->
+
+
+</mapper>

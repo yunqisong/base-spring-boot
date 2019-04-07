@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wosummer.demo.mapper.RecordMapper">
+
+  <!-- 通用查询结果 -->
+  <resultMap id="BaseResultMap" type="com.wosummer.demo.entity.Record">
+    <id column="id" property="id" />
+    <result column="info" property="info" />
+    <result column="method" property="method" />
+    <result column="api_result" property="apiResult" />
+    <result column="type_info" property="typeInfo" />
+    <result column="nickname" property="nickname" />
+    <result column="api" property="api" />
+    <result column="type" property="type" />
+    <result column="uid" property="uid" />
+    <result column="aid" property="aid" />
+    <result column="mid" property="mid" />
+    <result column="time" property="time" />
+  </resultMap>
+
+  <!-- 数据库字段 -->
+  <sql id="Base_Column_List">
+    `id`,`info`,`method`,`api_result`,`type_info`,`nickname`,`api`,`type`,`uid`,`aid`,`mid`,`time`
+  </sql>
+
+  <!-- 用户添加SQL -->
+
+
+</mapper>

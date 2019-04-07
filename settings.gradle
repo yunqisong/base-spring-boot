@@ -1,0 +1,10 @@
+pluginManagement {
+	repositories {
+		gradlePluginPortal()
+	}
+}
+rootProject.name = 'base-spring-boot'
+include 'boot-base'
+include 'boot-base-demo'
+include 'boot-base-generator'
+

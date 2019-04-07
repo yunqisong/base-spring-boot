@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wosummer.demo.mapper.MissionMapper">
+
+  <!-- 通用查询结果 -->
+  <resultMap id="BaseResultMap" type="com.wosummer.demo.entity.Mission">
+    <id column="id" property="id" />
+    <result column="content" property="content" />
+    <result column="type" property="type" />
+    <result column="info" property="info" />
+    <result column="state" property="state" />
+    <result column="deadline" property="deadline" />
+    <result column="created" property="created" />
+    <result column="paid" property="paid" />
+    <result column="enable" property="enable" />
+    <result column="articleId" property="articleId" />
+    <result column="articleNum" property="articleNum" />
+    <result column="articleTitle" property="articleTitle" />
+    <result column="postid" property="postid" />
+    <result column="price" property="price" />
+    <result column="receiveTime" property="receiveTime" />
+    <result column="receiverAccount" property="receiverAccount" />
+    <result column="receiverId" property="receiverId" />
+    <result column="receiverName" property="receiverName" />
+    <result column="rules" property="rules" />
+    <result column="submittime" property="submittime" />
+    <result column="passtime" property="passtime" />
+    <result column="tags" property="tags" />
+    <result column="example_images" property="exampleImages" />
+  </resultMap>
+
+  <!-- 数据库字段 -->
+  <sql id="Base_Column_List">
+    `id`,`content`,`type`,`info`,`state`,`deadline`,`created`,`paid`,`enable`,`articleId`,`articleNum`,`articleTitle`,`postid`,`price`,`receiveTime`,`receiverAccount`,`receiverId`,`receiverName`,`rules`,`submittime`,`passtime`,`tags`,`example_images`
+  </sql>
+
+  <!-- 用户添加SQL -->
+
+
+</mapper>

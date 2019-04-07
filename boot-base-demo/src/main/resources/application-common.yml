@@ -1,0 +1,7 @@
+swagger:
+  base-package: com.wosummer
+  title: 文字矿山项目API接口文档
+  description: 文字矿山项目API接口文档
+jwt:
+  route:
+    free-routers: /auth/login,/auth/register

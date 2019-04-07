@@ -1,0 +1,68 @@
+logging:
+  level:
+    org:
+      springframework:
+        data: INFO
+        security: INFO
+        jta: INFO
+    top: DEBUG
+    com:
+      wosummer: DEBUG
+      alibaba: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+  file: "log/server.log"
+swagger:
+  enabled: true
+  title: 文档标题
+  description: 文档描述
+  version: 1.0.9
+  base-package: com.wosummer
+  base-path: /**
+  exclude-path: /error
+  contact:
+    name: 上海夏暖文化科技有限公司
+  authorization:
+    name: X-Authorization
+    key-name: X-Authorization
+jwt:
+  header: X-Authorization
+  secret: WOSUMMER              #  加密的私钥
+  expiration: 86400             # 3天的有效时间
+  tokenHead: "Bearer "
+  defaultPassword: "111111"
+  cookieName: X-Authorization
+  parameterName: X-Authorization
+  route:
+    authentication:
+      path: auth
+      refresh: refresh
+      register: "auth/register"
+    free-routers:
+mybatis-plus:
+  mapper-locations: classpath*:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+  globalConfig:
+    banner: false
+spring:
+  http.converters.preferred-json-mapper: fastjson
+  datasource:
+    druid:
+      initialSize: 10
+      minIdle: 10
+      maxActive: 50
+      maxWait: 60000
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      validationQuery: SELECT 1
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      keepAlive: true
+      phyTimeoutMillis: 1200000
+      filters: stat,slf4j
+      WebStatFilter:
+        exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*"
